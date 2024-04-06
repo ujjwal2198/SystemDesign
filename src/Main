@@ -1,0 +1,14 @@
+import SystemDesign.Singleton.Singleton;
+
+class Main {
+public static void main(String args[]){
+          singletonFunction();
+}
+public static void singletonFunction(){
+  Singleton ob1 = Singleton.getSingletonInstance();
+  ob1.changeIValue(10);
+  Singleton ob2= Singleton.getSingletonInstance();
+  ob2.printIValue();
+  ob1.printIValue();
+  }
+  }
