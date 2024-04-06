@@ -1,8 +1,11 @@
 import SystemDesign.Singleton.Singleton;
+import SystemDesign.StrategyPattern.*;
+import java.util.*;
 
 class Main {
 public static void main(String args[]){
           singletonFunction();
+          driveStrategy();
 }
 public static void singletonFunction(){
   Singleton ob1 = Singleton.getSingletonInstance();
@@ -11,4 +14,18 @@ public static void singletonFunction(){
   ob2.printIValue();
   ob1.printIValue();
   }
-  }
+public static void driveStrategy(){
+   WheelerStrategy fourWheeler = new FourWheeler();
+   WheelerStrategy twoWheeler  = new TwoWheeler();
+
+   Vehicle vehicleFourWheeler = new Vehicle (fourWheeler);
+   Vehicle vehicleTwoWheeler  = new Vehicle (twoWheeler);
+
+   List<Vehicle> vehicles = new ArrayList<>();
+    vehicles.add(vehicleFourWheeler);
+    vehicles.add(vehicleTwoWheeler);
+   for(Vehicle v : vehicles){
+          v.applyAccerate();
+   }
+}
+}
