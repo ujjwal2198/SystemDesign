@@ -1,6 +1,6 @@
 package SystemDesign.StrategyPattern;
 
-class Vehicle{
+public class Vehicle{
   public WheelerStrategy wheelerStrategy ;
 
   public Vehicle(WheelerStrategy wheelerStrategy){
@@ -12,7 +12,7 @@ class Vehicle{
     System.out.println("Horn is Applied");
   }
 
-  public void applyBrake(){
-    wheelerStrategy.applyBrake();
+  public void applyAccerate(){
+    wheelerStrategy.applyAccerate();
   }
 }
