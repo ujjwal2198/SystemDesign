@@ -13,6 +13,6 @@ public class Vehicle{
   }
 
   public void applyAccerate(){
-    wheelerStrategy.applyAccerate();
+    wheelerStrategy.applyAccelerate();
   }
 }
